@@ -35,7 +35,7 @@ class Swiper extends Component {
   shouldComponentUpdate = (nextProps, nextState) => {
     const { props, state } = this
     const propsChanged = (
-      !isEqual(props.cards, nextProps.cards) ||
+      (props.cards !== nextProps.cards) ||
       props.cardIndex !== nextProps.cardIndex
     )
     const stateChanged = (
